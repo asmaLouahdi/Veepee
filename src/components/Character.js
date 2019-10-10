@@ -32,10 +32,6 @@ const useStyles = makeStyles(theme => ({
   },
   cardHeader: {
     height: 70
-  },
-  collapse: {
-    backgroundColor: "red",
-    position: "absolute"
   }
 }));
 
@@ -55,6 +51,7 @@ export default function Character(props) {
         <CardHeader
           className={classes.cardHeader}
           title={character.name}
+          onClick={switchToDetails}
           subheader={character.modified.split("T")[0]}
         />
         <CardMedia
