@@ -10,20 +10,11 @@ const useStyles = makeStyles(theme => ({
     height: 80
   }
 }));
-const generateColor = () => {
-  return (
-    "#" +
-    Math.random()
-      .toString(16)
-      .substr(-6)
-  );
-};
 const theme = createMuiTheme({
   typography: {
     button: {
       fontSize: 11,
-      color: "white",
-      backgroundColor: generateColor
+      color: "white"
     }
   }
 });
@@ -36,6 +27,7 @@ export default function Comic(props) {
       <ThemeProvider theme={theme}>
         <Button
           variant='contained'
+          color='primary'
           className={classes.margin}
           onClick={() => window.open(props.item.resourceURI, "_blank")}
         >

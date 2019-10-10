@@ -24,16 +24,6 @@ const useStyles = makeStyles(theme => ({
     height: 50,
     paddingTop: "56.25%" // 16:9
   },
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest
-    })
-  },
-  expandOpen: {
-    transform: "rotate(180deg)"
-  },
   cardContent: {
     padding: 0
   },
@@ -41,7 +31,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex"
   },
   cardHeader: {
-    height: 80
+    height: 70
   },
   collapse: {
     backgroundColor: "red",
@@ -84,7 +74,7 @@ export default function Character(props) {
             component='p'
           ></Typography>
         </CardContent>
-        <CardActions disableSpacing>
+        <CardActions disableSpacing style={{ height: 30 }}>
           <IconButton
             aria-label='Details'
             onClick={() => window.open(character.urls[0].url, "_blank")}

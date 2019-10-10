@@ -13,6 +13,7 @@ class Characters extends Component {
     const characters = this.props.characters.map(character => (
       <Character key={character.id} value={character} />
     ));
+
     return (
       <div id='container'>
         <Grid container spacing={1}>
