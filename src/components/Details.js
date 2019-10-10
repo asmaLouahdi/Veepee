@@ -60,7 +60,6 @@ export default function Details() {
   const comics = currentCharacter.comics.items.map(comic => (
     <Comic key={comic.name} item={comic} />
   ));
-  console.log(currentCharacter);
 
   const handlePanel = () => {
     dispatch(changeModal(isOpened));
